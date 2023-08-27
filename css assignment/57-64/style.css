@@ -1,0 +1,321 @@
+body{
+    font-family: arial;
+    text-transform: capitalize;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    width: 90%;
+    margin: 5% auto;
+}
+
+.assign-1 .grid {
+    background-color: #ddd;
+    padding: 10px 0px;
+    width: 800px;
+    height: 400px;
+    margin: 5% auto;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-around;
+    grid-template-rows: auto  1fr;
+}
+
+.assign-1 .grid div {
+    background-color: #607D8B;
+    counter-increment: cardNum;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.assign-1 .grid div::before {
+    content: 'Element ' counter(cardNum);
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+
+.layout {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto minmax(500px, 1fr) auto;
+    grid-template-areas:
+        "header header header header"
+        "section section section aside"
+        "footer footer footer footer"
+}
+
+.layout header,
+.layout section,
+.layout aside,
+.layout footer {
+    padding: 20px;
+}
+
+.layout header {
+    background-color: #03A9F4;
+    grid-area: header;
+}
+
+.layout header::after {
+    content: "Header";
+    color: white;
+}
+
+.layout section {
+    background-color: #FF5722;
+    grid-area: section;
+}
+
+.layout section::after {
+    content: "Section";
+    color: white;
+}
+
+.layout aside {
+    background-color: #607D8B;
+    grid-area: aside;
+
+}
+
+.layout aside::after {
+    content: "Aside";
+    color: white;
+}
+
+.layout footer {
+    background-color: #009688;
+    grid-area: footer;
+    
+}
+
+.layout footer::after {
+    content: "Footer";
+    color: white;
+}
+
+.grid-2 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 5% auto;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto repeat(2, 1fr) auto;
+}
+
+.grid-2 div {
+    background-color:#403F3F;
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.grid-3 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    display: grid;
+    margin: 1% auto;
+    grid-template-areas: 
+    "eight eight eight "
+    "two two three"
+    "four five five"
+    "six five five"
+    "seven five five"
+    "one one one"
+    ;
+
+}
+
+.grid-3 div {
+    background-color: #2196F3;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+}
+
+.grid-3 .one {
+    grid-area: one;
+    order: 8;
+}
+.grid-3 .two {
+    grid-area: two;
+    order: 2;
+
+}
+.grid-3 .three {
+    grid-area: three;
+    order: 3;
+
+}
+.grid-3 .four {
+    grid-area: four;
+    order: 4;
+}
+.grid-3 .five {
+    grid-area: five;
+    order: 5;
+
+}
+.grid-3 .six {
+    grid-area: six;
+    order: 6;
+
+}
+.grid-3 .seven {
+    grid-area: seven;
+    order: 7;
+
+}
+.grid-3 .eight {
+    grid-area: eight;
+    order: 1;
+}
+
+
+.grid-4 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    display: grid;
+    padding: 10px;
+    margin: 5% auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content min-content;
+    align-content: space-between;
+}
+
+.grid-4 div {
+    color: white;
+    background-color: #E91E63;
+    padding: 5px;
+    text-align: center;
+    margin: 10px 10px;
+}
+
+
+
+
+
+
+.challenge {
+    background-color: #EEE;
+    padding: 6vh;
+    display: grid;
+    grid-template-areas: 
+    "one one two three"
+    "four five five three"
+    "four six six three"
+    "seven eight nine ten"
+    ;
+    grid-gap: 2vh;
+}
+
+
+.challenge div{
+    padding: 2vh;
+    border-bottom: 0.5vh solid #FF3D00;
+    display: grid;
+
+}
+
+.challenge .one{
+    grid-area: one;
+}
+.challenge .two{
+    grid-area: two;
+}
+.challenge .three {
+    grid-area: three;
+}
+.challenge .four {
+    grid-area: four;
+}
+.challenge .five {
+    grid-area: five;
+}
+.challenge .six {
+    grid-area: six;
+}
+.challenge .seven {
+    grid-area: seven;
+}
+.challenge .eight {
+    grid-area: eight;
+}
+.challenge .nine {
+    grid-area: nine;
+}
+.challenge .ten {
+    grid-area: ten;
+}
+
+.challenge h3 {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.challenge span {
+    color: #0000007f;
+    font-size: 2vh;
+    font-weight: bold;
+    padding-bottom: 3vh;
+}
+
+.challenge p {
+    text-transform: none;
+    padding-top: 3vh;
+}
+
+.challenge span:last-of-type {
+    font-size: 5vh;
+    padding: 0;
+    align-self: flex-end;
+    text-align: end;
+}
+
+.challenge p:first-of-type {
+    font-weight: bold;
+}
+
+.challenge .whiteC {
+    background-color: white;
+    color: black;
+}
+
+.challenge .blackC {
+    background-color: black;
+    color: white;
+}
+
+.challenge .blackC span {
+    color: #ffffff99;
+
+}
+

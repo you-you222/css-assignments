@@ -1,0 +1,248 @@
+body{
+    padding: 25px;
+    font-family: arial;
+    text-transform: capitalize;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.assign-1 {
+    display: flex;
+    color: #FF5722;
+    background-color: #EEE;
+    align-items: center;
+    box-shadow: 5px  0 #03A9F4, -5px 0 #FF5722;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 5% auto;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.parent-1 {
+    width: 600px;
+    height: 300px;
+    margin: 5% auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+    background-color: #EEE;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.parent-1 div {
+    background-color: #F44336;
+    color: white;
+    text-align: center;
+    width: 32%;
+    padding: 10px;
+}
+
+.parent-2 {
+    width: 600px;
+    height: 300px;
+    margin: 5% auto;
+    display: flex;
+    background-color: #EEE;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: s;
+    padding: 10px;
+}
+
+.parent-2 div {
+    background-color: #607D8B;
+    flex-basis: calc(92%/3);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.parent-2 .six {
+    order: 0;
+}
+
+.parent-2 .five {
+    order: 3;
+}
+
+.parent-2 .three {
+    order: 1;
+    align-self: flex-start;
+}
+
+.parent-2 .two {
+    order: 4;
+}
+
+.parent-2 .four {
+    order: 2;
+}
+
+.parent-2 .one {
+    order: 5;
+    align-self: flex-end;
+}
+
+.parent-3 {
+    width: 600px;
+    height: 300px;
+    margin: 5% auto;
+    display: flex;
+    background-color: #EEE;
+    padding: 10px;
+    flex-direction: column;
+
+}
+
+.parent-3 div {
+    background-color: #009688;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-basis: calc(100%/3);
+    padding: 10px;
+}
+
+.parent-3 .one {
+    align-self: flex-end;
+}
+.parent-3 .two {
+    width: 50%;
+}
+.parent-3 .three {
+    align-self: flex-end;
+}
+
+.parent-4 {
+    width: 600px;
+    height: 300px;
+    margin: 5% auto;
+    display: flex;
+    background-color: #EEE;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.parent-4 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-basis: 17%;
+    height: 50%;
+}
+.parent-4 .one {
+    background-color:rgb(255,152,0) ;
+    order: 2;
+}
+.parent-4 .two {
+    background-color:#8BC34A ;
+    order: 3;
+    align-self: flex-end;
+
+}
+.parent-4 .three {
+    background-color:#795548 ;
+    order: 4;
+}
+.parent-4 .four {
+    background-color:#673AB7 ;
+    order: 1;
+    align-self: flex-end;
+}
+
+
+
+
+
+
+:root {
+    --mainBGcolor: #DDD;
+    --mainColor: black;
+    --mainPadding: 2%;
+    --mainMargin: 5%
+}
+
+.page {
+    background-color: #EEE;
+    padding: var(--mainPadding);
+    margin: 5% auto;
+}
+
+.page .header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.page .logo {
+    padding: var(--mainPadding) calc(2*(var(--mainPadding)));
+    background-color: var(--mainBGcolor);
+    color: var(--mainColor);
+    display: inline-flex; 
+    width: 9.5%;
+    justify-content: center;
+}
+
+.page .links {
+    display: inline-flex;
+    width: 89.5%;
+    justify-content: flex-end;
+    background-color: var(--mainBGcolor);
+    padding: 2*(var(--mainPadding));
+
+}
+
+.links li {
+    list-style: none;
+    display: inline-block;
+    padding: var(--mainPadding);
+
+}
+
+.main-area {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5% 0 ;
+}
+
+.main-area div {
+    height: 400px;
+}
+
+.main-area .content {
+    width: 69.5%;
+    background-color: var(--mainBGcolor);
+    color: var(--mainColor);
+    padding: var(--mainPadding);
+}
+
+.main-area .sidebar {
+    width: 29.5%;
+    background-color: var(--mainBGcolor);
+    color: var(--mainColor);
+    padding: var(--mainPadding);
+}
+
+.footer {
+    background-color: var(--mainBGcolor);
+    color: var(--mainColor);
+    padding: var(--mainPadding);
+    display: flex;
+    justify-content: space-between;
+}
+

@@ -1,0 +1,92 @@
+body{
+    font-family: arial;
+    text-transform: capitalize;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    width: 90%;
+    height: 0.5vh;
+    border: none;
+    margin: 5% auto;
+    background-color: #737373;
+}
+
+@media print {
+    .assign-one {
+        font-size: 40px; 
+    }
+}
+
+.assign-2, .assign-3 {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #EEE;
+    text-align: center;
+    color: black;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 100px) {
+    .product {
+        width: 98%;
+    }
+    .product h3 {
+        color: #000;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .product {
+        width: 48%;
+    }
+    .product h3 {
+        color: #FF0000;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .product {
+        width: 23%;
+    }
+    .product h3 {
+        color: #007988;
+    }
+}
+
+
+
+@media screen and (min-width: 500px) {
+    .assign-3 .product {
+        width: calc(95% / 3);
+    }
+    .assign-3 .product:first-of-type {
+        width: 98%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .assign-3 .product {
+        width: 48%;
+    }
+    .assign-3 .product:first-of-type , .assign-3 .product:last-of-type {
+        width: 98%;
+    }
+}
+
+
+

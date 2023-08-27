@@ -1,0 +1,275 @@
+body{
+    font-family: arial;
+    text-transform: capitalize;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    width: 90%;
+    height: 0.5vh;
+    border: none;
+    margin: 5% auto;
+    background-color: #737373;
+}
+
+.assign-1 {
+    width: 50px;
+    height: 50px;
+    margin: 50px auto;
+    border: 5px solid #FC2455;
+    border-left-color: transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 1s;
+    animation-name: rotating-1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+.assign-1:hover {
+    animation-play-state: paused;
+}
+
+.assign-1, .assign-1::after, .assign-1::before {
+    border-radius: 50%;
+}
+
+.assign-1::before,.assign-1::after {
+    content: "";
+    position: absolute;
+}
+.assign-1::before {
+    width: 55px;
+    height: 55px;
+    border: 5px solid #0090FF;
+    border-right-color: transparent;
+}
+.assign-1::after {
+    width: 70px;
+    height: 70px;
+    border: 5px solid #FC9000;
+    border-top-color: transparent;
+}
+
+@keyframes rotating-1 {
+    to {
+        transform: rotate(1turn);
+    }
+}
+@keyframes rotating-2 {
+    to {
+        transform: rotate(-1turn);
+    }
+}
+
+.assign-2 {
+    width: 50px;
+    height: 50px;
+    margin: 50px auto;
+    border: 5px solid #FC2455;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 1.5s;
+    animation-name: rotating-1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+
+
+}
+
+
+
+.assign-2::before,.assign-2::after {
+    content: "";
+    position: absolute;
+}
+.assign-2::before {
+    width: 55px;
+    height: 55px;
+    border: 5px solid #0090FF;
+    animation-duration: 1s;
+    animation-name: rotating-1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+
+}
+.assign-2::after {
+    width: 70px;
+    height: 70px;
+    border: 5px solid #000;
+    animation-duration: 22s;
+    animation-name: rotating-1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+.assign-2, .assign-2::after, .assign-2::before {
+    border-radius: 50%;
+    border-bottom-color: transparent;
+}
+.assign-2:hover, .assign-2:hover::after, .assign-2:hover::before {
+    animation-play-state: running;
+}
+
+
+.assign-3 {
+    display:block;
+    width: 50px;
+    height: 50px;
+    margin: 50px auto;
+    background-color: #D8D8FF;
+    border: 5px solid black;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation-duration: 1s;
+    animation-name: rotating-2;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+.assign-4 {
+    width: 90%;
+    height: 400px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.letterE,.letterL {
+    background-color: #323234;
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.letterE {
+    justify-content: flex-end;
+    padding-top: 10%;
+}
+
+.letterL {
+    justify-content: end;
+    align-items: start;
+}
+
+.wall-1,.wall-2 {
+    height: 30%;
+    width: 75%;
+    background-color: #FFF;
+}
+
+.wall-3 {
+    height: 80%;
+    width: 75%;
+    background-color: #FFF;
+}
+
+.ball {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+.letterE .ball {
+    background-color: #FEA604;
+    top: 9px;
+    right: 9px;
+    animation-name: eBall;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes eBall {
+    10% {
+        transform:translate(-213px,0px);
+    }
+
+    20% {
+        transform: translate(-213px,165px);
+
+    }
+    
+    30% {
+        transform: translate(0px, 165px);
+    }
+    
+    40% {
+        transform: translate(-213px, 165px);
+    }
+    
+    50% {
+        transform: translate(-213px, 336px);
+    }
+    60% {
+        transform: translate(0px, 336px);
+    }
+    70% {
+        transform: translate(-213px, 336px);
+    }
+    80% {
+        transform: translate(-213px, 0);
+    }
+    100% {
+        transform: translate(0px, 0);
+    }
+    
+}
+
+.letterL .ball {
+    top: 339px;
+    right: 13px;
+    background-color: transparent;
+    animation-name: lBall;
+    animation-delay: 5s;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes lBall {
+    10% {
+        background-color: #FEA604 ;
+        transform: translate(0, 0);  
+    }
+    30% {
+        transform: translate(-215px, 0);  
+        background-color: #FEA604 ;
+
+    }
+
+    80% {
+        transform: translate(-215px, -330px);
+        background-color: #FEA604 ;
+
+    }
+
+    100% {
+        transform: translate(-215px, -330px);
+        background-color: transparent ;
+
+    }
+
+}
+
+
+

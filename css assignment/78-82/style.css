@@ -1,0 +1,36 @@
+body{
+    font-family: arial;
+    text-transform: capitalize;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    width: 90%;
+    height: 0.5vh;
+    border: none;
+    margin: 5% auto;
+    background-color: #737373;
+}
+
+.assign-1 div.main.red { color: red;}
+
+.assign-2 .parent:first-of-type :last-child {color: red;}
+
+.assign-3 .parent:nth-of-type(2) .baby {color: red;}
+
+.assign-4 > div[title="Elzero"]:not(.no-need), .assign-4 > div[title="Hello"], .assign-4 > div[title="HTML"] {color: red;}
+
+.assign-5 div:nth-of-type(2) > div[title="Elzero"] {color: red;}
+
+.assign-6 div:not(.no-need) > div:nth-last-of-type(2) {color: red;}
+
+.assign-7 div:first-of-type> div:nth-last-of-type(2) {color: red;}
+
+.assign-8 div:nth-of-type(2),.assign-8 div:nth-of-type(3),.assign-8 div p:first-of-type {color: red;}

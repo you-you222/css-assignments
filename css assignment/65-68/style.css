@@ -1,0 +1,109 @@
+body{
+    font-family: arial;
+    text-transform: capitalize;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    width: 90%;
+    margin: 5% auto;
+}
+
+.assign-1 {
+    width:300px;
+    height: 200px;
+    margin: 5% auto;
+    color: #03A9F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEE;
+    font-size: 40px;
+    font-weight: bold;
+    border: 1px solid #CCCCCC;
+    position: relative;
+}
+
+.assign-1::before {
+    content: "";
+    background-color: #03A9F4;
+    width:300px;
+    height: 200px;
+    transform: rotate(-5deg);
+    position: absolute;
+    z-index: -1;
+}
+
+.assign-1::after {
+    content: "";
+    background-color: #E91E63;
+    width:300px;
+    height: 200px;
+    transform: rotate(5deg);
+    position: absolute;
+    z-index: -2;
+}
+
+
+
+.assign-2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.assign-2 div {
+    width: 200px;
+    height: 200px;
+    background-color: #EEE;
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid #CCCCCC;
+    color: black;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+}
+
+.assign-2 div::before {
+    content: "";
+    background-color: #EEE;
+    width:220px;
+    height: 220px;
+    border: 10px solid #03A9F4;
+    border-radius: 50%;
+    border-right-color: transparent;
+    position: absolute;
+    left: -20px;
+    z-index: -2;
+    transition: all 0.5s 0.5s ease-in-out;
+
+}
+
+.assign-2 div::after {
+    content: "";
+    background-color: #EEE;
+    width:200px;
+    height: 200px;
+    border: 10px solid #E91E63;
+    border-radius: 50%;
+    border-left-color: transparent;
+    position: absolute;
+    z-index: -1;
+    left: -10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.assign-2 div:hover::before, .assign-2 div:hover::after {
+    transform: rotate(360deg);
+}
